@@ -30,32 +30,17 @@
 
 ## Motivation &#x1F499;
 
-* Use an autoencoder(AE) to compress the files in the dataset from 4 to 3 variables. https://drive.google.com/drive/folders/1JaCB-prsDhEX4Ovk-UjC9bMxOHbpfREr?usp=sharing
+* Use an autoencoder (AE) to compress hadron jet event data from 4 to 3 variables. https://drive.google.com/drive/folders/1JaCB-prsDhEX4Ovk-UjC9bMxOHbpfREr?usp=sharing
 * Introduction to fundamental concepts of data analysis in HEP experiments given a basic knowledge of particle physics
-* 
-
-
-Lossy compression of hadron jet data using autoencoders (AE)
-
-Our goal: train Neural Networks to compress event size even further • Train using large amounts of
-data
-• Use for fast compression
-online
-
-
-* Technical Requirements 
+* Technical Requirements:
   * PyTorch
   * FastAI Library https://docs.fast.ai/install.html
   * ROOT Data Analysis Framework 
-  
-Setup your ML environment with CERN ATLAS and docker containters. Contains dockerfiles for images that contain ATLAS and ML components with atlas-sit/docker as a dependency
-
-https://gitlab.cern.ch/aml/containers/docker
+  * ML environment with CERN ATLAS and docker containters
 
 ---
 ## High Energy Physics  &#x1F499;
-* In the physical sciences, physicists study subatomic particles (particles smaller than an atom) to gain an understanding of thow tey interact.  
-*  Experimental physicists spend much of their professional lives analysing collision data, working towards a potential discovery or to sharpen our picture of nature.
+* In  physical sciences, physicists study subatomic particles to gain an understanding of how particles smaller than an atom interact by analyzing collision data
 * Standard Model of elementary particles 
   * 6 "flavors" of quarks: up, down, strange, charm, bottom, and top;
   * 6 types of leptons: electron, electron neutrino, muon, muon neutrino, tau, tau neutrino;
@@ -67,53 +52,46 @@ https://gitlab.cern.ch/aml/containers/docker
   * Fermions
 * Hadrons 
   * Subatomic composite particle made of two or more quarks held together by the strong force in a similar way as molecules are held together by the electromagnetic force
-  * Two types of Hardons
-    * Baryons : Ex. Protons and neutrons 
-    * Mesons : Ex. Pions
+  * Two types of Hardons:
+    * Baryons Ex. Protons and neutrons 
+    * Mesons Ex. Pions
   * Contain few (≤ 5) antiquarks
   * Like all subatomic particles, hadrons are assigned quantum numbers corresponding to the representations of the Poincaré group: JPC(m), where J is the spin quantum number, P the intrinsic parity (or P-parity), C the charge conjugation (or C-parity), and m the particle's mass.
-  * all composite particles contain multiple quarks (antiquarks) bound together by gluons 
-  *  unstable and eventually decay (break down) into other particles
+  * All composite particles contain multiple quarks (antiquarks) bound together by gluons 
+  * Unstable and eventually decay (break down) into other particles
   * Experimentally, hadron physics is studied by colliding protons or nuclei of heavy elements such as lead or gold, and detecting the debris in the produced particle showers. 
-  * In the natural environment, mesons such as pions are produced by the collisions of cosmic rays with the atmosphere.
+  * In the natural environment, mesons such as pions are produced by the collisions of cosmic rays with the atmosphere
 
 ---
 ## CERN's Large Hadron Collider &#x1F499;
-*  Tim Berners-Lee, a British scientist, invented the World Wide Web (WWW) in 1989, while working at CERN. The web was originally conceived and developed to meet the demand for automated information-sharing between scientists in universities and institutes around the world.
 * Large Hadron Collider (LHC) = world's largest and highest-energy particle collider built by European Organization for Nuclear Research (CERN) in Geneva 
-* The aim of the LHC's detectors is to allow physicists to test the predictions of different theories of particle physics, including measuring the properties of the Higgs boson
-* A collider is a type of a particle accelerator with two directed beams of particles. It is a research tool used to accelerate particles to very high kinetic energies and let them impact other particles
+*  British scientist Tim Berners-Lee invented the World Wide Web (WWW) in 1989, while working at CERN originally to meet the demand for automated information-sharing between scientists around the world
+* The aim of the LHC's detectors is to allow physicists to test the predictions of different theories of particle physics, including measuring the properties of the Higgs boson. The collider is a type of a particle accelerator with two directed beams of particles. The research tool used to accelerate particles to very high kinetic energies and let them impact other particles
 * Goal is to understand more of the subatomic world and the laws of physics that govern them and answer some of the fundamental open questions in science. This requires high energy collisions and particle decays after very short periods of time.
 
 ----
 
 ## ATLAS &#x1F499;
-* A Toroidal LHC ApparatuS
-[Technical Breakdown Picture of ATLAS ]
-  * largest, general-purpose particle detector experiment at the Large Hadron Collider (LHC), a particle accelerator at CERN (the European Organization for Nuclear Research) in Switzerland
-  *  ATLAS is designed to measure the broadest possible range of signals. This is intended to ensure that whatever form any new physical processes or particles might take, ATLAS will be able to detect them and measure their properties. ATLAS is designed to detect these particles, namely their masses, momentum, energies, lifetime, charges, and nuclear spins
-  * Designed to search for evidence of theories of particle physics beyond the Standard Model.
+  * Largest general-purpose particle detector experiment at the Large Hadron Collider
+  * Designed to measure the broadest possible range of signals. This is intended to ensure that whatever form any new physical processes or particles might take, ATLAS will be able to detect them and measure their properties. ATLAS is designed to detect these particles, namely their masses, momentum, energies, lifetime, charges, and nuclear spins and to search for evidence of theories of particle physics beyond the Standard Model.
   * One of two general-purpose detectors. ATLAS studies the Higgs boson and looks for signs of new physics, including the origins of mass and extra dimensions.
-  * involved in the discovery of the Higgs boson in July 2012. One of the most important goals of ATLAS was to investigate a missing piece of the Standard Model, the Higgs boson
+  * Involved in the discovery of the Higgs boson in July 2012. One of the most important goals of ATLAS was to investigate a missing piece of the Standard Model, the Higgs boson
   * Higgs mechanism is essential to explain the generation mechanism of the property "mass" for gauge bosons.
-  * Peter Higgs and François Englert had been awarded the 2013 Nobel Prize in Physics after serach found Higgs boson predicted by the theory
----
-## ATLAS Data &#x1F499;
-
-* ATLAS data generation 
-  * Generates large amounts of data ~ total of 1 petabyte of raw data per second. 25 megabytes per event (raw; zero suppression reduces this to 1.6 MB), multiplied by 40 million beam crossings per second in the center of the detector
+  * Peter Higgs and François Englert had been awarded the 2013 Nobel Prize in Physics after serach found Higgs boson
   
+---
+## ATLAS Data Generation &#x1F499;
+* Generates large amounts of data ~ total of 1 petabyte of raw data per second. 25 megabytes per event (raw; zero suppression reduces this to 1.6 MB), multiplied by 40 million beam crossings per second in the center of the detector
 * Particle Physics Trigger System 
   * Due to the extremely high LHC collision rate of up to 20 MHz not all events can be stored. A trigger
 system selects the ”interesting” events and reduces the total event rate to a few hundred Hertz.
   * When the LHC is operating, 40 million packets of protons collide every second at the centre of the ATLAS detector. Every time there is a collision, the ATLAS Trigger selects interesting collisions and writes them to disk for further analysis. A small subset of these collisions are passed through visualisation software and displayed on a large screen in the ATLAS Control Room for the physicists on shift to view. Although this is just another tool for monitoring the detector, it is also fun to watch. So, we thought we would share it with you here. (Be patient, it might take a moment to load.)
-
   * System decides which events in a particle detector to keep when only a small fraction of the total can be recorded
-  * selectivity of the trigger: The ratio of the trigger rate to the event rate   * For example, the Large Hadron Collider (LHC) has an event rate of 40 MHz (4·107 Hz), and the Higgs boson is expected to be produced there at a rate of roughly 1 Hz. 
+  * Selectivity of the trigger: The ratio of the trigger rate to the event rate   * For example, the Large Hadron Collider (LHC) has an event rate of 40 MHz (4·107 Hz), and the Higgs boson is expected to be produced there at a rate of roughly 1 Hz. 
   * Two trigger levels 
     * Level 1 :  uses information from the calorimeters and the muon spectrometer, and decreases the rate of events in the read-out to 100 kHz
     * Level 2 : uses limited regions of the detector, so-called regions of interest (RoI), to reconstruct events by matching energy deposits to tracks
-* The remaining data, corresponding to about 1000 events per second, are stored for further analysis[31].
+* The remaining data, corresponding to about 1000 events per second, are stored for further analysis
 
 
 ---
@@ -127,7 +105,7 @@ system selects the ”interesting” events and reduces the total event rate to 
 
 ---
 
-## Technical Download_the_HEP_data&#x1F499;
+## Technical Download_the_HEP_data &#x1F499;
 * Download dataset https://drive.google.com/drive/folders/1JaCB-prsDhEX4Ovk-UjC9bMxOHbpfREr
 * Uncompress the large file size (26 MBytes)
 * Move files into `dataset` folder in the example folder of this repo
