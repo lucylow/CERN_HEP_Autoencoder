@@ -1,6 +1,6 @@
-# CERN ATLAS Autoencoders 🔬
+# Deep Neural Network Autoencoders for Data Compression in High Energy Physics🔬
 
-**＊ ✿ ❀ Training an autoencoder to compress data from CERN's high energy physics dataset ❀ ✿ ＊**
+**＊ ✿ ❀ Use an autoencoder to compress data from CERN's high energy physics dataset ❀ ✿ ＊**
 
 
 <div>
@@ -30,7 +30,10 @@
 
 ## Motivation &#x1F49C;
 
-* Train an autoencoder(AE) to compress the files in the dataset from 4 to 3 variables. https://drive.google.com/drive/folders/1JaCB-prsDhEX4Ovk-UjC9bMxOHbpfREr?usp=sharing
+* Use an autoencoder(AE) to compress the files in the dataset from 4 to 3 variables. https://drive.google.com/drive/folders/1JaCB-prsDhEX4Ovk-UjC9bMxOHbpfREr?usp=sharing
+* Introduction to fundamental concepts of data analysis in HEP experiments given a basic knowledge of particle physics
+* 
+
 
 Lossy compression of hadron jet data using autoencoders (AE)
 
@@ -48,6 +51,53 @@ online
 Setup your ML environment with CERN ATLAS and docker containters. Contains dockerfiles for images that contain ATLAS and ML components with atlas-sit/docker as a dependency
 
 https://gitlab.cern.ch/aml/containers/docker
+
+---
+## High Energy Physics  &#x1F49C;
+* In the physical sciences, physicists study subatomic particles (particles smaller than an atom) to gain an understanding of thow tey interact.  
+*  Experimental physicists spend much of their professional lives analysing collision data, working towards a potential discovery or to sharpen our picture of nature.
+* Standard Model of elementary particles 
+  * 6 "flavors" of quarks: up, down, strange, charm, bottom, and top;
+  * 6 types of leptons: electron, electron neutrino, muon, muon neutrino, tau, tau neutrino;
+  * 12 gauge bosons: the photon of electromagnetism, the three W and Z bosons of the weak force, and the eight gluons of the strong force;
+  * The Higgs boson
+* Sub-atomic particles 
+  * Bosons 
+  * Hadrons
+  * Fermions
+* Hadrons 
+  * Subatomic composite particle made of two or more quarks held together by the strong force in a similar way as molecules are held together by the electromagnetic force
+  * Two types of Hardons
+    * Baryons : Ex. Protons and neutrons 
+    * Mesons : Ex. Pions
+  * Contain few (≤ 5) antiquarks
+  * Like all subatomic particles, hadrons are assigned quantum numbers corresponding to the representations of the Poincaré group: JPC(m), where J is the spin quantum number, P the intrinsic parity (or P-parity), C the charge conjugation (or C-parity), and m the particle's mass.
+  * all composite particles contain multiple quarks (antiquarks) bound together by gluons 
+  *  unstable and eventually decay (break down) into other particles
+  * Experimentally, hadron physics is studied by colliding protons or nuclei of heavy elements such as lead or gold, and detecting the debris in the produced particle showers. 
+  * In the natural environment, mesons such as pions are produced by the collisions of cosmic rays with the atmosphere.
+
+---
+## CERN's Large Hadron Collider &#x1F49C;
+*  Tim Berners-Lee, a British scientist, invented the World Wide Web (WWW) in 1989, while working at CERN. The web was originally conceived and developed to meet the demand for automated information-sharing between scientists in universities and institutes around the world.
+* Large Hadron Collider (LHC) = world's largest and highest-energy particle collider built by European Organization for Nuclear Research (CERN) in Geneva 
+* The aim of the LHC's detectors is to allow physicists to test the predictions of different theories of particle physics, including measuring the properties of the Higgs boson
+* A collider is a type of a particle accelerator with two directed beams of particles. It is a research tool used to accelerate particles to very high kinetic energies and let them impact other particles
+* Goal is to understand more of the subatomic world and the laws of physics that govern them and answer some of the fundamental open questions in science. This requires high energy collisions and particle decays after very short periods of time.
+
+----
+
+## A Toroidal LHC ApparatuS (ATLAS) &#x1F49C;
+
+[Technical Breakdown Picture of ATLAS ]
+  * largest, general-purpose particle detector experiment at the Large Hadron Collider (LHC), a particle accelerator at CERN (the European Organization for Nuclear Research) in Switzerland
+  *  ATLAS is designed to measure the broadest possible range of signals. This is intended to ensure that whatever form any new physical processes or particles might take, ATLAS will be able to detect them and measure their properties. ATLAS is designed to detect these particles, namely their masses, momentum, energies, lifetime, charges, and nuclear spins
+  * Designed to search for evidence of theories of particle physics beyond the Standard Model.
+  * One of two general-purpose detectors. ATLAS studies the Higgs boson and looks for signs of new physics, including the origins of mass and extra dimensions.
+  * involved in the discovery of the Higgs boson in July 2012. One of the most important goals of ATLAS was to investigate a missing piece of the Standard Model, the Higgs boson
+  * Higgs mechanism is essential to explain the generation mechanism of the property "mass" for gauge bosons.
+  * Peter Higgs and François Englert had been awarded the 2013 Nobel Prize in Physics after serach found Higgs boson predicted by the theory
+
 
 
 ---
@@ -97,18 +147,106 @@ npm install
 ```
 
 ---
+## ATLAS Data  &#x1F49C;
 
-## Download_the_HEP_data &#x1F49C;
+* ATLAS data generation 
+  * Generates large amounts of data ~ total of 1 petabyte of raw data per second. 25 megabytes per event (raw; zero suppression reduces this to 1.6 MB), multiplied by 40 million beam crossings per second in the center of the detector
+* Particle Physics Trigger System 
+  * Due to the extremely high LHC collision rate of up to 20 MHz not all events can be stored. A trigger
+system selects the ”interesting” events and reduces the total event rate to a few hundred Hertz.
+  * When the LHC is operating, 40 million packets of protons collide every second at the centre of the ATLAS detector. Every time there is a collision, the ATLAS Trigger selects interesting collisions and writes them to disk for further analysis. A small subset of these collisions are passed through visualisation software and displayed on a large screen in the ATLAS Control Room for the physicists on shift to view. Although this is just another tool for monitoring the detector, it is also fun to watch. So, we thought we would share it with you here. (Be patient, it might take a moment to load.)
+
+  * System decides which events in a particle detector to keep when only a small fraction of the total can be recorded
+  * selectivity of the trigger: The ratio of the trigger rate to the event rate   * For example, the Large Hadron Collider (LHC) has an event rate of 40 MHz (4·107 Hz), and the Higgs boson is expected to be produced there at a rate of roughly 1 Hz. 
+  * Two trigger levels 
+    * Level 1 :  uses information from the calorimeters and the muon spectrometer, and decreases the rate of events in the read-out to 100 kHz
+    * Level 2 : uses limited regions of the detector, so-called regions of interest (RoI), to reconstruct events by matching energy deposits to tracks
+* The remaining data, corresponding to about 1000 events per second, are stored for further analysis[31].
+
+
+* Data event reconstruction
+  * Performed on all permanently stored events, turning the pattern of signals from the detector into physics objects, such as jets, photons, and leptons. 
+  * Grid computing software is being used extensively for event reconstruction, allowing the parallel use of university and laboratory computer networks throughout the world for the CPU-intensive task of reducing large quantities of raw data into a form suitable for physics analysis. 
+
+
+* Data Event Sonification 
+  * One can also take the physical parameters of collision data and transform them to sound, a process called sonification. The Quantizer project, developed in collaboration with MIT Media Lab, applies pre-defined mappings, developed by musical composers, to create unique real-time streams of, well, the songs of nature. 
+
+
+---
+
+## Technical Download_the_HEP_data &#x1F49C;
 * Download dataset https://drive.google.com/drive/folders/1JaCB-prsDhEX4Ovk-UjC9bMxOHbpfREr
 * Uncompress the large file size (26 MBytes)
 * Move files into `dataset` folder in the example folder of this repo
 * Data is in a pickle python format: 
 
 > import pandas
-
 > object = pd.read_pickle(r'filepath')
 
+---
+## Data Analysis &#x1F49C;
 
+The event information is kept to a minimum: four-momentum components of leading jets, electrons, muons, and photons; combined particle based isolation for leptons and photons as well as b-tag information.
+
+We've chosen as an example a TTbar analysis to explain the concepts of invariant mass, purity and efficiency of a selection, trigger efficiency, and event reconstruction. The goal is a simple cross section measurement and a top quark mass measurement.
+
+The starting point is an introduction to the analysis framework, including examples for producing histograms of basic quantities such as momentum distributions. The students are then supposed to develop the analysis by themselves, following some guidelines and suggestions provided through exercise sheets. A sample solution can be provided as well (which can be handed to the students at the very end).
+
+The full analysis, including data and MC files fits into a 30 Megabyte tar ball (see below) and runs on a standard computer within a few seconds. The only requirement for the computing environment is a ROOT installation.
+
+
+
+---
+## Setup Docker Environment  &#x1F49C;
+Dockerfiles for images that contain ATLAS and ML components with atlas-sit/docker as a dependency at https://gitlab.cern.ch/aml/containers/docker
+
+Also need to install ROOT via Docker 
+> docker run --rm -it rootproject/root-ubuntu16
+
+Download DOCKER and pull the images from Docker Hub:
+> docker pull atlasml/ml-base:debian
+
+To run the ML base container:
+> docker run --rm -it -v $PWD:/home/atlas/data -p 8888:8888 atlasml/ml-base:debian
+
+Run a Jupyter server and open jupyter-notebooks running in the container
+> jupyter notebook
+
+
+---
+## Installation &#x1F49C;
+ 
+Git pull the project from the git repository:
+
+git init
+git pull https://github.com/lucylow/CERN_HEP_Autoencoder
+
+--- 
+
+## Data preprocessing &#x1F49C;
+
+Pre-processing: Extract data from the /datasets
+
+The data comes in two types: 4-dim data and the 27-dim data. (Although the original events holds 29 values, only 27 of them are of constant size.)
+
+The raw DxAODs can be processed into a 4-dimensional dataset with process_ROOT_4D.ipynb, where the data is pickled into a 4D pandas Dataframe. process_ROOT_27D.ipynb does the same for the 27-dimensional data. Since pickled python objects are very version incompatible, it is recommended to process the raw ROOT DxAODs instead of providing the pickled processed data.
+
+For ease of use, put raw data in data/ and put processed data in processed_data/
+
+The 27-variables in question are:
+
+All processed data will be placed in processed_data/ after extraction (by default). No normalization or other ML-related pre-processing is done in this step.
+
+Training: An (uncommented) example of training a 4D-network is fastai_AE_3D_200_no1cycle.ipynb and looks very much like every other training script in this project. If the data you have looks any different it will need to be retrained. See the report for previous searches of optimal network sizes.
+
+Analysis and plots: An example of running a 4-dimensional already trained network is 4D/fastai_AE_3D_200_no1cycle_analysis.ipynb For an example of analysing a 27-D network is 27D/27D_analysis.py.
+
+Code structure: The folders named 4D/, 25D/ and 27D/ simply holds training analysis scripts for that amount of dimensions.
+
+nn_utils.py holds various heplful for networks structures and training functions.
+
+utils.py holds functions for normalization and event filtering, amongst others.
 ---
 
 ## Run_the_training_script &#x1F49C;
@@ -122,12 +260,26 @@ npm install
 yarn train
 ```
 ---
+## Reconstruction  &#x1F49C;
 
-## Performance Plot Comparison  &#x1F49C;
+
+---
+
+## Performance Analysis Plot Comparison  &#x1F49C;
+
+Performance Analysis
+-	Will reduce to disk resources needed to store the TALAS data 
+-	Reduces storage space 
+
+
 
 Produce plots of the difference between original and uncompressed variables for each entry of the dataset, divided by the original variable. You can also add other plots (eg reconstruction loss).
 
+
 does the network work well for compression based on them?
+
+-	Compare the results 
+-	Use graphs for each AE performance 
 
 
 ---
@@ -186,14 +338,32 @@ Far future steps
 Understand how to use this kind of network for compression in jets/events in the
 bytestream
 Write a PUB note?
-Any further suggestions?
 
 
+Analysis scripts for CPU/GPU and memory usage when evaluating the networks?
+
+Adding more robust scripts for extraction from the raw ROOT data, i.e. actual scripts and not jupyter-notebooks, for 4, 25 and 27 dimensions. (And optimize them.)?
+
+Chain networks with other compression techniques?
+
+Train on whole events and not only on individual jets?
+
+
+
+Discovery of the Higgs boson has opened up whole new windows in the search for new physics, since its properties are predicted to be different in different theoretical models. Supersymmetry, for example, predicts the existence of at least five different types of Higgs bosons. Will the Standard Model continue to survive the precision measurements of the LHC or will an improved model appear? Only the analysis of new data at even higher collision energy will tell.
+
+
+
+Physicists belonging to worldwide collaborations work continuously to improve detector-calibration methods, and to refine processing algorithms to detect ever more interesting events.
 
 ---
 
 ## References &#x1F49C;
+* First Ever Open Access Data From the Large Hadron Collider Helped Physicists Confirm Subatomic Patterns https://futurism.com/first-ever-open-access-data-from-the-large-hadron-collider-helped-physicists-confirm-subatomic-patterns
 * Unpack the Jet dataset: https://stackoverflow.com/questions/24906126/how-to-unpack-pkl-file
+* https://github.com/root-project/root
+* A Roadmap for HEP Software and Computing R&D for the 2020s
+ https://arxiv.org/abs/1712.06982
 * ML compression of ATLAS triggered jet events using autoencoders https://github.com/Skelpdar/HEPAutoencoders
 * Eric Wulff. Deep Autoencoders for Compression in High Energy Physics Paper https://lup.lub.lu.se/student-papers/search/publication/9004751 and https://indico.cern.ch/event/870013/contributions/3668675/attachments/1960856/3260728/Autoencoders_for_jet_compresion_in_HEP.pdf 
 * FastAI Autoencoders https://alanbertl.com/autoencoder-with-fast-ai/
@@ -202,3 +372,4 @@ Any further suggestions?
 * FAST HEP Helping turn your trees into tables (ie. reads ROOT TTrees, writes summary Pandas DataFrames) https://github.com/fast-hep/fast-carpenter
 * Demo analysis based on the CMS Public HEP Tutorial from 2012 https://gitlab.cern.ch/fast-hep/public/fast_cms_public_tutorial
 * Docker FAST HEP https://hub.docker.com/r/fasthep/fast-hep-docker
+* CMS HEP and it's Four Tutorials with ROOT framework  http://ippog.org/resources/2012/cms-hep-tutorial
