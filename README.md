@@ -126,7 +126,7 @@ The starting point is an introduction to the analysis framework, including examp
 The full analysis, including data and MC files fits into a 30 Megabyte tar ball (see below) and runs on a standard computer within a few seconds. The only requirement for the computing environment is a ROOT installation.
 
 * Data event reconstruction
-  * Performed on all permanently stored events, turning the pattern of signals from the detector into physics objects, such as jets, photons, and leptons. 
+  * Performed on all permanently stored events, turning the pattern of signals from the detector into physics objects, such as jets, photons, and leptons.  
   * Grid computing software is being used extensively for event reconstruction, allowing the parallel use of university and laboratory computer networks throughout the world for the CPU-intensive task of reducing large quantities of raw data into a form suitable for physics analysis. 
 
 
