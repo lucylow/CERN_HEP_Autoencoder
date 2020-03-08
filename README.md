@@ -1,4 +1,4 @@
-# Deep Neural Network Autoencoders for Data Compression in High Energy Physics🔬
+# Deep Neural Network Autoencoders for Data Compression in High Energy Physics 🔬&#x1F499;
 
 **＊ ✿ ❀ Use an autoencoder to compress data from CERN's high energy physics dataset ❀ ✿ ＊**
 
@@ -15,7 +15,7 @@
 
 ---
 
-## Table_of_Contents &#x1F49C;
+## Table_of_Contents &#x1F499;
 
 * [Motivation](#Motivation-)
 * [Autoencoders](#Autoencoders-)
@@ -28,7 +28,7 @@
 
 ---
 
-## Motivation &#x1F49C;
+## Motivation &#x1F499;
 
 * Use an autoencoder(AE) to compress the files in the dataset from 4 to 3 variables. https://drive.google.com/drive/folders/1JaCB-prsDhEX4Ovk-UjC9bMxOHbpfREr?usp=sharing
 * Introduction to fundamental concepts of data analysis in HEP experiments given a basic knowledge of particle physics
@@ -53,7 +53,7 @@ Setup your ML environment with CERN ATLAS and docker containters. Contains docke
 https://gitlab.cern.ch/aml/containers/docker
 
 ---
-## High Energy Physics  &#x1F49C;
+## High Energy Physics  &#x1F499;
 * In the physical sciences, physicists study subatomic particles (particles smaller than an atom) to gain an understanding of thow tey interact.  
 *  Experimental physicists spend much of their professional lives analysing collision data, working towards a potential discovery or to sharpen our picture of nature.
 * Standard Model of elementary particles 
@@ -78,7 +78,7 @@ https://gitlab.cern.ch/aml/containers/docker
   * In the natural environment, mesons such as pions are produced by the collisions of cosmic rays with the atmosphere.
 
 ---
-## CERN's Large Hadron Collider &#x1F49C;
+## CERN's Large Hadron Collider &#x1F499;
 *  Tim Berners-Lee, a British scientist, invented the World Wide Web (WWW) in 1989, while working at CERN. The web was originally conceived and developed to meet the demand for automated information-sharing between scientists in universities and institutes around the world.
 * Large Hadron Collider (LHC) = world's largest and highest-energy particle collider built by European Organization for Nuclear Research (CERN) in Geneva 
 * The aim of the LHC's detectors is to allow physicists to test the predictions of different theories of particle physics, including measuring the properties of the Higgs boson
@@ -87,8 +87,8 @@ https://gitlab.cern.ch/aml/containers/docker
 
 ----
 
-## A Toroidal LHC ApparatuS (ATLAS) &#x1F49C;
-
+## ATLAS &#x1F499;
+* A Toroidal LHC ApparatuS
 [Technical Breakdown Picture of ATLAS ]
   * largest, general-purpose particle detector experiment at the Large Hadron Collider (LHC), a particle accelerator at CERN (the European Organization for Nuclear Research) in Switzerland
   *  ATLAS is designed to measure the broadest possible range of signals. This is intended to ensure that whatever form any new physical processes or particles might take, ATLAS will be able to detect them and measure their properties. ATLAS is designed to detect these particles, namely their masses, momentum, energies, lifetime, charges, and nuclear spins
@@ -97,60 +97,12 @@ https://gitlab.cern.ch/aml/containers/docker
   * involved in the discovery of the Higgs boson in July 2012. One of the most important goals of ATLAS was to investigate a missing piece of the Standard Model, the Higgs boson
   * Higgs mechanism is essential to explain the generation mechanism of the property "mass" for gauge bosons.
   * Peter Higgs and François Englert had been awarded the 2013 Nobel Prize in Physics after serach found Higgs boson predicted by the theory
-
-
-
 ---
-
-## Autoencoders &#x1F49C;
-* "Autoencoding" == **Data compression algorithm** with compression and decompression functions
-* User defines the parameters in the function using variational autoencoder
-* Self-supervised learning where target models are generated from input data
-* Implemented with **neural networks** - useful for problems in unsupervised learning (no labels)
-
----
-
-## Variational Autoencoders (VAE) &#x1F49C;
-
-* Variational autoencoders are autoencoders, but with more constraints
-* **Generative model** with parameters of a probability distribution modeling the data
-* The encoder, decoder, and VAE are 3 models that share weights. After training the VAE model, **the encoder can be used to generate latent vectors**
-
-Example of **encoder network maping inputs to latent vectors**:
-
-* Input samples x into two parameters in latent space = **z_mean and z_log_sigma** 
-* Randomly sample points z from latent normal distribution to generate data
-* z = z_mean + exp(z_log_sigma) * epsilon, where epsilon is a **random normal tensor**
-* **Decoder network maps latent space** points back to the original input data
-
-```python
-
- x = Input(batch_shape=(batch_size, original_dim))
- 
- h = Dense(intermediate_dim, activation='relu')(x)
- 
- z_mean = Dense(latent_dim)(h)
- 
- z_log_sigma = Dense(latent_dim)(h)
-```
-*Sample Code for VAE encoder network*
-
----
-  
-## Prepare_the_node_environment &#x1F49C;
-
-
-```sh
-yarn
-# Or
-npm install
-```
-
----
-## ATLAS Data  &#x1F49C;
+## ATLAS Data &#x1F499;
 
 * ATLAS data generation 
   * Generates large amounts of data ~ total of 1 petabyte of raw data per second. 25 megabytes per event (raw; zero suppression reduces this to 1.6 MB), multiplied by 40 million beam crossings per second in the center of the detector
+  
 * Particle Physics Trigger System 
   * Due to the extremely high LHC collision rate of up to 20 MHz not all events can be stored. A trigger
 system selects the ”interesting” events and reduces the total event rate to a few hundred Hertz.
@@ -164,6 +116,37 @@ system selects the ”interesting” events and reduces the total event rate to 
 * The remaining data, corresponding to about 1000 events per second, are stored for further analysis[31].
 
 
+---
+
+## Autoencoders &#x1F499;
+* "Autoencoding" == **Data compression algorithm** with compression and decompression functions
+* Self-supervised learning where target models are generated from input data
+* Implemented with **neural networks** - useful for problems in unsupervised learning (no labels)
+
+
+
+---
+
+## Technical Download_the_HEP_data&#x1F499;
+* Download dataset https://drive.google.com/drive/folders/1JaCB-prsDhEX4Ovk-UjC9bMxOHbpfREr
+* Uncompress the large file size (26 MBytes)
+* Move files into `dataset` folder in the example folder of this repo
+* Data is in a pickle python format: 
+
+> import pandas
+> object = pd.read_pickle(r'filepath')
+
+---
+## Data Analysis &#x1F499;
+
+The event information is kept to a minimum: four-momentum components of leading jets, electrons, muons, and photons; combined particle based isolation for leptons and photons as well as b-tag information.
+
+We've chosen as an example a TTbar analysis to explain the concepts of invariant mass, purity and efficiency of a selection, trigger efficiency, and event reconstruction. The goal is a simple cross section measurement and a top quark mass measurement.
+
+The starting point is an introduction to the analysis framework, including examples for producing histograms of basic quantities such as momentum distributions. The students are then supposed to develop the analysis by themselves, following some guidelines and suggestions provided through exercise sheets. A sample solution can be provided as well (which can be handed to the students at the very end).
+
+The full analysis, including data and MC files fits into a 30 Megabyte tar ball (see below) and runs on a standard computer within a few seconds. The only requirement for the computing environment is a ROOT installation.
+
 * Data event reconstruction
   * Performed on all permanently stored events, turning the pattern of signals from the detector into physics objects, such as jets, photons, and leptons. 
   * Grid computing software is being used extensively for event reconstruction, allowing the parallel use of university and laboratory computer networks throughout the world for the CPU-intensive task of reducing large quantities of raw data into a form suitable for physics analysis. 
@@ -174,31 +157,7 @@ system selects the ”interesting” events and reduces the total event rate to 
 
 
 ---
-
-## Technical Download_the_HEP_data &#x1F49C;
-* Download dataset https://drive.google.com/drive/folders/1JaCB-prsDhEX4Ovk-UjC9bMxOHbpfREr
-* Uncompress the large file size (26 MBytes)
-* Move files into `dataset` folder in the example folder of this repo
-* Data is in a pickle python format: 
-
-> import pandas
-> object = pd.read_pickle(r'filepath')
-
----
-## Data Analysis &#x1F49C;
-
-The event information is kept to a minimum: four-momentum components of leading jets, electrons, muons, and photons; combined particle based isolation for leptons and photons as well as b-tag information.
-
-We've chosen as an example a TTbar analysis to explain the concepts of invariant mass, purity and efficiency of a selection, trigger efficiency, and event reconstruction. The goal is a simple cross section measurement and a top quark mass measurement.
-
-The starting point is an introduction to the analysis framework, including examples for producing histograms of basic quantities such as momentum distributions. The students are then supposed to develop the analysis by themselves, following some guidelines and suggestions provided through exercise sheets. A sample solution can be provided as well (which can be handed to the students at the very end).
-
-The full analysis, including data and MC files fits into a 30 Megabyte tar ball (see below) and runs on a standard computer within a few seconds. The only requirement for the computing environment is a ROOT installation.
-
-
-
----
-## Setup Docker Environment  &#x1F49C;
+## Setup Docker Environment  &#x1F499;
 Dockerfiles for images that contain ATLAS and ML components with atlas-sit/docker as a dependency at https://gitlab.cern.ch/aml/containers/docker
 
 Also need to install ROOT via Docker 
@@ -215,7 +174,7 @@ Run a Jupyter server and open jupyter-notebooks running in the container
 
 
 ---
-## Installation &#x1F49C;
+## Installation &#x1F499;
  
 Git pull the project from the git repository:
 
@@ -224,7 +183,7 @@ git pull https://github.com/lucylow/CERN_HEP_Autoencoder
 
 --- 
 
-## Data preprocessing &#x1F49C;
+## Data preprocessing &#x1F499;
 
 Pre-processing: Extract data from the /datasets
 
@@ -247,25 +206,19 @@ Code structure: The folders named 4D/, 25D/ and 27D/ simply holds training analy
 nn_utils.py holds various heplful for networks structures and training functions.
 
 utils.py holds functions for normalization and event filtering, amongst others.
+
 ---
 
-## Run_the_training_script &#x1F49C;
+## Run_the_training_script &#x1F499;
 
 * For this project, we don't need to train the network since there is an ready-made network in the folder. However, there is a training/testing dataset if you want to train your own model:
 
 * Can not feed all the data to the model at once due to computer memory limitations so **data is split into "batches"** 
 * When all batches are fed exactly once, an "epoch" is completed. As training script runs, **preview images afer every epoch will show**
 
-```sh
-yarn train
-```
----
-## Reconstruction  &#x1F49C;
-
-
 ---
 
-## Performance Analysis Plot Comparison  &#x1F49C;
+## Performance Analysis Plot Comparison  &#x1F499;
 
 Performance Analysis
 -	Will reduce to disk resources needed to store the TALAS data 
@@ -284,20 +237,7 @@ does the network work well for compression based on them?
 
 ---
 
-## Loss_error_function &#x1F49C;
-
-* **Loss function to account for error in training** since Ms.Robot is picky about her fashion pieces 
-* Two loss function options: The default **binary cross entropy (BCE)** or **mean squared error (MSE)**
-* The loss from a good training run will be approx 40-50 range whereas an average training run will be close to zero
-
-  ![Example loss curve from training](https://github.com/lucylow/Ms.Robot/blob/master/images/vae_tensorboard2.png)
-
-    *Image of loss curve with the binary cross entropy error function*
-
-
----
-
-## Conclusion_Model_Discussion &#x1F49C;
+## Conclusion_Model_Discussion &#x1F499;
 
 Results show a _________ model with parameters of a probability distribution variational autoencoder (VAE) is capable of achieving results on a highly challenging dataset of over ____________ images using machine learning. This is done by scanning the latent plane, sampling the latent points at regular intervals, to generate the corresponding ____________ for each point. 
 
@@ -358,7 +298,7 @@ Physicists belonging to worldwide collaborations work continuously to improve de
 
 ---
 
-## References &#x1F49C;
+## References &#x1F499;
 * First Ever Open Access Data From the Large Hadron Collider Helped Physicists Confirm Subatomic Patterns https://futurism.com/first-ever-open-access-data-from-the-large-hadron-collider-helped-physicists-confirm-subatomic-patterns
 * Unpack the Jet dataset: https://stackoverflow.com/questions/24906126/how-to-unpack-pkl-file
 * https://github.com/root-project/root
