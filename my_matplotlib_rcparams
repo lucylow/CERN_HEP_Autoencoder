@@ -1,0 +1,24 @@
+# Axes
+axes.titlesize : 26
+axes.labelsize : 25
+axes.grid : True
+
+# Lines
+lines.linewidth : 3
+lines.markersize : 10
+
+# Ticks
+xtick.labelsize : 22
+ytick.labelsize : 22
+
+# Grids
+grid.linestyle   :   :
+grid.linewidth   :   0.8
+grid.alpha       :   0.8
+
+# Legends
+legend.fontsize : 24
+
+# Figure
+figure.titlesize : 26
+figure.figsize : 12, 9
