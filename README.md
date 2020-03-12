@@ -62,6 +62,10 @@
     * C the charge conjugation (or C-parity)
     * m the particle's mass
 
+
+![dsada](https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/images/Screen%20Shot%202020-03-11%20at%201.40.19%20PM.png)
+
+
 ---
 ## CERN's_Large_Hadron_Collider &#x1F499;
 * **Large Hadron Collider (LHC)** == world's largest and highest-energy particle collider built by European Organization for Nuclear Research (CERN) in Geneva 
@@ -78,6 +82,7 @@
 * Generates large amounts of data ~ total of 1 petabyte of raw data per second. 25 megabytes per event (raw; zero suppression reduces this to 1.6 MB), multiplied by 40 million beam crossings per second in the center of the detector
 * The remaining data, corresponding to about 1000 events per second, are stored for further analysis
   
+![dsada](https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/images/Screen%20Shot%202020-03-11%20at%201.41.16%20PM.png)  
 ---
 ## ATLAS_Particle_Physics_Trigger_System &#x1F499;
 * Particle Physics Trigger System (https://atlas.cern/discover/detector/trigger-daq)
@@ -115,6 +120,9 @@
   * Muons
   * Photons
 
+![dsada](https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/images/Screen%20Shot%202020-03-11%20at%208.11.20%20PM.png)  
+
+
 * Introduction to the analysis framework, including examples for producing histograms of basic quantities such as momentum distributions
 * Using plots and graphical analysis to explain the concepts of invariant mass, purity and efficiency of a selection, trigger efficiency, and event reconstruction. 
 * **Data event reconstruction (Grid computing software) **
@@ -150,6 +158,20 @@ Produce plots of the difference between **original and uncompressed variables fo
 **Does the network work well for compression based on them?**
 * Compare the results 
 * Use graphs for each AE performance 
+
+![dsada](https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/images/Screen%20Shot%202020-03-11%20at%208.11.48%20PM.png)  
+
+
+![dsada](https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/images/Screen%20Shot%202020-03-11%20at%208.12.01%20PM.png)  
+
+
+
+![dsada](https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/images/Screen%20Shot%202020-03-11%20at%208.12.11%20PM.png)  
+
+
+
+![dsada](https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/images/Screen%20Shot%202020-03-11%20at%208.12.20%20PM.png)  
+
 
 ---
 
