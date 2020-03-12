@@ -35,7 +35,7 @@
 ## Motivation &#x1F499;
 * Physicists belonging to worldwide collaborations work continuously to improve **machine learning methods in high energy physics** to detect ever more interesting events. Their goal is to understand more of the subatomic world and the laws of physics that govern them and answer some of the fundamental open questions in science. Discovery of the Higgs boson has opened up whole new windows in the search for new physics, to **search for evidence of theories of particle physics beyond the Standard Model**. This requires high energy collisions and particle decays after very short periods of time.
 * Storage is one of the main limiting factors to the recording of information from proton-proton collision events at the Large Hadron Collider. Scientists want to reduce the size of the data that is recorded, and **study compression algorithms that can be used directly within the trigger system**. Gain expertise in cutting-edge machine learning techniques, and learn to use them in the context of **data compression and detection of anomalous events**. 
-* In this experiment, an **autoencoder (AE) is used to compress hadron jet event data from 4 to 3 variables** (Located in /dataset)
+* In this experiment, an **autoencoder (AE) is used to compress hadron jet event data from 4 to 3 variables** (Located in /dataset). **That analysis is in the Juypter Notebook: https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/autoencoder.ipynb** 
 
 * **Technical Requirements:**
   * PyTorch
@@ -125,7 +125,7 @@
 
 * Introduction to the analysis framework, including examples for producing histograms of basic quantities such as momentum distributions
 * Using plots and graphical analysis to explain the concepts of invariant mass, purity and efficiency of a selection, trigger efficiency, and event reconstruction. 
-* **Data event reconstruction (Grid computing software) **
+* **Data event reconstruction (Grid computing software)**
   * Turns the pattern of signals from the detector into physics objects, such as jets, photons, and leptons  
   * CPU-intensive task of reducing large quantities of raw data into a form suitable for physics analysis
 
