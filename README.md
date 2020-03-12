@@ -2,9 +2,6 @@
 
 **＊ ✿ ❀ Use an autoencoder to compress hadron jet event data from 4 to 3 variables from CERN's high energy physics dataset ❀ ✿ ＊**
 
-![dsada](https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/physics%20memes%20for%20quantum%20entangled%20teens.png)
-
-
 <div>
   
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()
@@ -14,13 +11,15 @@
 
 </div>
 
+![dsada](https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/physics%20memes%20for%20quantum%20entangled%20teens.png)
+
 
 ---
 
 ## Table_of_Contents &#x1F499;
 
 * [Motivation](#Motivation-)
-* [High_Engery_Physics](#High_Engery_Physics-)
+* [High_Energy_Physics](#High_Energy_Physics-)
 * [CERN's_Large_Hadron_Collider](#CERN's_Large_Hadron_Collider-)
 * [ATLAS](#ATLAS-) 
 * [ATLAS_Particle_Physics_Trigger_System](#ATLAS_Particle_Physics_Trigger_System-)
@@ -46,7 +45,7 @@
   * ML environment Dockerfiles for images that contain CERN ATLAS and ML components (https://gitlab.cern.ch/aml/containers/docker)
 
 ---
-## High_Engery_Physics &#x1F499;
+## High_Energy_Physics &#x1F499;
 * **Standard Model of elementary particles**
   * The Higgs boson
 * **Sub-atomic particles** 
