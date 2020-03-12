@@ -91,7 +91,7 @@
 * **Selectivity of the trigger:**
   * The ratio of the trigger rate to the event rate   
   * LHC has an event rate of 40 MHz (4·107 Hz), and the Higgs boson is expected to be produced there at a rate of roughly 1 Hz. 
-* **Two trigger levels **
+* **Two trigger levels**
   * Level 1 : Information from the calorimeters and the muon spectrometer, and decreases the rate of events in the read-out to 100 kHz
   * Level 2 : Limited regions of the detector, so-called regions of interest (RoI), to reconstruct events by matching energy deposits to tracks
 
