@@ -18,16 +18,16 @@
 ## Table_of_Contents &#x1F499;
 
 * [Motivation](#Motivation-)
-* [High Engery Physics](#High_Engery_Physics-)
-* [CERN's Large Hadron Collider](#CERN's_Large_Hadron_Collider-)
+* [High_Engery_Physics](#High_Engery_Physics-)
+* [CERN's_Large_Hadron_Collider](#CERN's_Large_Hadron_Collider-)
 * [ATLAS](#ATLAS-) 
-* [ATLAS Particle Physics Trigger System](#ATLAS_Particle_Physics_Trigger_System-)
-* [Machine Learning Autoencoders](#Machine_Learning_Autoencoders-)
-* [Technical Data Analysis](#Technical_Data_Analysis-)
-* [CERN's Large Hadron Collider](#CERN's_Large_Hadron_Collider-)
-* [Setup Docker Environment](#Setup_Docker_Environment-) 
-* [Performance Analysis Plot Comparison](#Performance_Analysis_Plot_Comparison-)
-* [Future Experimental Suggestions](#Future_Experimental_Suggestions-) 
+* [ATLAS_Particle_Physics_Trigger_System](#ATLAS_Particle_Physics_Trigger_System-)
+* [Machine_Learning_Autoencoders](#Machine_Learning_Autoencoders-)
+* [Technical_Data_Analysis](#Technical_Data_Analysis-)
+* [CERN's_Large_Hadron_Collider](#CERN's_Large_Hadron_Collider-)
+* [Setup_Docker_Environment](#Setup_Docker_Environment-) 
+* [Performance_Analysis_Plot_Comparison](#Performance_Analysis_Plot_Comparison-)
+* [Future_Experimental_Suggestions](#Future_Experimental_Suggestions-) 
 * [References](#references-) 
 
 ---
@@ -44,7 +44,7 @@
   * ML environment Dockerfiles for images that contain CERN ATLAS and ML components (https://gitlab.cern.ch/aml/containers/docker)
 
 ---
-## High Energy Physics  &#x1F499;
+## High_Engery_Physics &#x1F499;
 * **Standard Model of elementary particles**
   * The Higgs boson
 * **Sub-atomic particles** 
@@ -63,7 +63,7 @@
     * m the particle's mass
 
 ---
-## CERN's Large Hadron Collider &#x1F499;
+## CERN's_Large_Hadron_Collider &#x1F499;
 * **Large Hadron Collider (LHC)** == world's largest and highest-energy particle collider built by European Organization for Nuclear Research (CERN) in Geneva 
 *  British scientist Tim Berners-Lee invented the **World Wide Web (WWW) in 1989, while working at CERN** originally to meet the demand for automated information-sharing between scientists around the world
 * Dectectors allow physicists to **test the predictions of different theories of particle physics, including measuring the properties of the Higgs boson** 
@@ -79,7 +79,7 @@
 * The remaining data, corresponding to about 1000 events per second, are stored for further analysis
   
 ---
-## ATLAS Particle Physics Trigger System  &#x1F499;
+## ATLAS_Particle_Physics_Trigger_System &#x1F499;
 * Particle Physics Trigger System (https://atlas.cern/discover/detector/trigger-daq)
 * 40 million packets of protons collide every second at the centre of the ATLAS detector during LHC operation. Due to the extremely high LHC collision rate of up to 20 MHz not all events can be stored. 
 * **Particle Physics Trigger System** == A trigger system selects specific events and writes them to disk for further analysis.System decides which events in a particle detector to keep when only a small fraction of the total can be recorded. A small subset of these collisions are passed through visualisation software and displayed on a large screen in the ATLAS Control Room 
@@ -94,7 +94,7 @@
 
 ---
 
-## Machine Learning Autoencoders &#x1F499;
+## Machine_Learning_Autoencoders &#x1F499;
 
 * Autoencoder (AE) netural networks commonly used for compression and anomaly detection
 * **AEs have been shown to successfully compress and reconstruct simple jet data.** Data compression algorithm with compression and decompression functions
@@ -103,7 +103,7 @@
 * ROOT framework in the HEP community paper **"Exploring compression techniques for ROOT IO"** https://arxiv.org/abs/1704.06976
 
 ---
-## Technical Data Analysis &#x1F499;
+## Technical_Data_Analysis &#x1F499;
 * Download jet dataset https://drive.google.com/drive/folders/1JaCB-prsDhEX4Ovk-UjC9bMxOHbpfREr
   * Data is in a pickled python format: 
   > import pandas
@@ -124,7 +124,7 @@
 
 
 ---
-## Setup Docker Environment  &#x1F499;
+## Setup_Docker_Environment &#x1F499;
 Dockerfiles for images that contain ATLAS and ML components with atlas-sit/docker as a dependency at https://gitlab.cern.ch/aml/containers/docker
 
 Install ROOT via Docker and  pull the images from Docker Hub: 
@@ -139,7 +139,7 @@ Run a Jupyter server and open jupyter-notebooks running in the container
 
 ---
 
-## Performance Analysis Plot Comparison  &#x1F499;
+## Performance_Analysis_Plot_Comparison &#x1F499;
 
 Produce plots of the difference between **original and uncompressed variables for each entry of the dataset, divided by the original variable**. You can also add other plots (eg reconstruction loss).
 
@@ -153,7 +153,7 @@ Produce plots of the difference between **original and uncompressed variables fo
 
 ---
 
-## Future Experimental Suggestions &#x1F499;
+## Future_Experimental_Suggestions &#x1F499;
 
 * Discrete variables could be treated more appropriately, e.g. using one-hot
 encoding
