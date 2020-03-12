@@ -2,6 +2,8 @@
 
 **＊ ✿ ❀ Use an autoencoder to compress hadron jet event data from 4 to 3 variables from CERN's high energy physics dataset ❀ ✿ ＊**
 
+![dsada](https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/physics%20memes%20for%20quantum%20entangled%20teens.png)
+
 
 <div>
   
