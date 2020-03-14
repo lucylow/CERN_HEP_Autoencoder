@@ -84,7 +84,11 @@
 * The remaining data, corresponding to about 1000 events per second, are stored for further analysis
   
 ![dsada](https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/images/Screen%20Shot%202020-03-11%20at%201.41.16%20PM.png)  
+
+
 ---
+
+
 ## ATLAS_Particle_Physics_Trigger_System &#x1F499;
 * Particle Physics Trigger System (https://atlas.cern/discover/detector/trigger-daq)
 * 40 million packets of protons collide every second at the centre of the ATLAS detector during LHC operation. Due to the extremely high LHC collision rate of up to 20 MHz not all events can be stored. 
