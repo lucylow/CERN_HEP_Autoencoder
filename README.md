@@ -177,7 +177,7 @@ Produce plots of the difference between **original and uncompressed variables fo
 
 ---
 
-## Future_Experimental_Suggestions &#x1F499
+## Future_Experimental_Suggestions
 
 * Discrete variables could be treated more appropriately, e.g. using one-hot
 encoding
@@ -202,6 +202,7 @@ compress)
 * https://github.com/root-project/root
 * A Roadmap for HEP Software and Computing R&D for the 2020s
  https://arxiv.org/abs/1712.06982
+* CERN's public datasets that are used for machine learning studies at the LHC for benchmarking https://iml.web.cern.ch/public-datasets
 * ML compression of ATLAS triggered jet events using autoencoders https://github.com/Skelpdar/HEPAutoencoders
 * Eric Wulff. Deep Autoencoders for Compression in High Energy Physics Paper https://lup.lub.lu.se/student-papers/search/publication/9004751 and https://indico.cern.ch/event/870013/contributions/3668675/attachments/1960856/3260728/Autoencoders_for_jet_compresion_in_HEP.pdf 
 * FastAI Autoencoders https://alanbertl.com/autoencoder-with-fast-ai/
@@ -211,5 +212,5 @@ compress)
 * Demo analysis based on the CMS Public HEP Tutorial from 2012 https://gitlab.cern.ch/fast-hep/public/fast_cms_public_tutorial
 * Docker FAST HEP https://hub.docker.com/r/fasthep/fast-hep-docker
 * CMS HEP and it's Four Tutorials with ROOT framework  http://ippog.org/resources/2012/cms-hep-tutorial
-* Listing of useful learning resources for machine learning applications in high energy physics (HEPML)
+* List of learning resources for machine learning applications in high energy physics (HEPML)
 https://github.com/iml-wg/HEP-ML-Resources
