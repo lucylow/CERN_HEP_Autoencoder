@@ -13,7 +13,7 @@
 
 ---
 
-## Table_of_Contents &#x1F499;
+## Table_of_Contents;
 
 * [Motivation](#Motivation-)
 * [High_Energy_Physics](#High_Energy_Physics-)
@@ -30,7 +30,7 @@
 
 ---
 
-## Motivation &#x1F499;
+## Motivation;
 * Physicists belonging to worldwide collaborations work continuously to improve **machine learning methods in high energy physics** to detect ever more interesting events. Their goal is to understand more of the subatomic world and the laws of physics that govern them and answer some of the fundamental open questions in science. Discovery of the Higgs boson has opened up whole new windows in the search for new physics, to **search for evidence of theories of particle physics beyond the Standard Model**. This requires high energy collisions and particle decays after very short periods of time.
 * Storage is one of the main limiting factors to the recording of information from proton-proton collision events at the Large Hadron Collider. Scientists want to reduce the size of the data that is recorded, and **study compression algorithms that can be used directly within the trigger system**. Gain expertise in cutting-edge machine learning techniques, and learn to use them in the context of **data compression and detection of anomalous events**. 
 * In this experiment, an **autoencoder (AE) is used to compress hadron jet event data from 4 to 3 variables** (Located in /dataset). **That analysis is in the Juypter Notebook: https://github.com/lucylow/CERN_HEP_Autoencoder/blob/master/autoencoder.ipynb** 
@@ -42,7 +42,7 @@
   * ML environment Dockerfiles for images that contain CERN ATLAS and ML components (https://gitlab.cern.ch/aml/containers/docker)
 
 ---
-## High_Energy_Physics &#x1F499;
+## High_Energy_Physics;
 * **Standard Model of elementary particles**
   * The Higgs boson
 * **Sub-atomic particles** 
@@ -65,7 +65,7 @@
 
 
 ---
-## CERN's_Large_Hadron_Collider &#x1F499;
+## CERN's_Large_Hadron_Collider;
 * **Large Hadron Collider (LHC)** == world's largest and highest-energy particle collider built by European Organization for Nuclear Research (CERN) in Geneva 
 *  British scientist Tim Berners-Lee invented the **World Wide Web (WWW) in 1989, while working at CERN** originally to meet the demand for automated information-sharing between scientists around the world
 * Dectectors allow physicists to **test the predictions of different theories of particle physics, including measuring the properties of the Higgs boson** 
@@ -73,7 +73,7 @@
 
 ----
 
-## ATLAS &#x1F499;
+## ATLAS;
   * ATLAS is the **largest general-purpose particle detector experiment** at the Large Hadron Collider
   * Experiment was designed to measure the broadest possible range of signals. It is designed to detect these particles, namely their masses, momentum, energies, lifetime, charges, and nuclear spins
   * In July 2012, it was involved in the discovery of the Higgs boson. Higgs mechanism is essential to explain the generation mechanism of the property "mass" for gauge bosons. P**eter Higgs and François Englert had been awarded the 2013 Nobel Prize in Physics** after serach found Higgs boson. Yay!
@@ -86,7 +86,7 @@
 ---
 
 
-## ATLAS_Particle_Physics_Trigger_System &#x1F499;
+## ATLAS_Particle_Physics_Trigger_System;
 * Particle Physics Trigger System (https://atlas.cern/discover/detector/trigger-daq)
 * 40 million packets of protons collide every second at the centre of the ATLAS detector during LHC operation. Due to the extremely high LHC collision rate of up to 20 MHz not all events can be stored. 
 * **Particle Physics Trigger System** == A trigger system selects specific events and writes them to disk for further analysis.System decides which events in a particle detector to keep when only a small fraction of the total can be recorded. A small subset of these collisions are passed through visualisation software and displayed on a large screen in the ATLAS Control Room 
@@ -101,7 +101,7 @@
 
 ---
 
-## Machine_Learning_Autoencoders &#x1F499;
+## Machine_Learning_Autoencoders;
 
 * Autoencoder (AE) netural networks commonly used for compression and anomaly detection
 * **AEs have been shown to successfully compress and reconstruct simple jet data.** Data compression algorithm with compression and decompression functions
@@ -110,7 +110,7 @@
 * ROOT framework in the HEP community paper **"Exploring compression techniques for ROOT IO"** https://arxiv.org/abs/1704.06976
 
 ---
-## Technical_Data_Analysis &#x1F499;
+## Technical_Data_Analysis;
 * Download jet dataset https://drive.google.com/drive/folders/1JaCB-prsDhEX4Ovk-UjC9bMxOHbpfREr
   * Data is in a pickled python format: 
   > import pandas
@@ -134,7 +134,7 @@
 
 
 ---
-## Setup_Docker_Environment &#x1F499;
+## Setup_Docker_Environment;
 Dockerfiles for images that contain ATLAS and ML components with atlas-sit/docker as a dependency at https://gitlab.cern.ch/aml/containers/docker
 
 Install ROOT via Docker and  pull the images from Docker Hub: 
@@ -149,7 +149,7 @@ Run a Jupyter server and open jupyter-notebooks running in the container
 
 ---
 
-## Performance_Analysis_Plot_Comparison &#x1F499;
+## Performance_Analysis_Plot_Comparison;
 
 Produce plots of the difference between **original and uncompressed variables for each entry of the dataset, divided by the original variable**. You can also add other plots (eg reconstruction loss).
 
@@ -211,5 +211,5 @@ compress)
 * Demo analysis based on the CMS Public HEP Tutorial from 2012 https://gitlab.cern.ch/fast-hep/public/fast_cms_public_tutorial
 * Docker FAST HEP https://hub.docker.com/r/fasthep/fast-hep-docker
 * CMS HEP and it's Four Tutorials with ROOT framework  http://ippog.org/resources/2012/cms-hep-tutorial
-
-**For Lukas, Antonio, & Caterina :)** 
+* Listing of useful learning resources for machine learning applications in high energy physics (HEPML)
+https://github.com/iml-wg/HEP-ML-Resources
